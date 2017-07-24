@@ -1,0 +1,17 @@
+type Query {
+    todos: [Todo]
+}
+
+type Todo {
+    id: Int!
+    what: String!
+    done: Boolean!
+}
+
+type Mutation {
+    saveTodos(todos: [TodoInput]): String
+}
+
+input TodoInput {
+    what: String!
+}
